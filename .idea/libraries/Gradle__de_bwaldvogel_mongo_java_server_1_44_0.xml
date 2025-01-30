@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: de.bwaldvogel:mongo-java-server:1.44.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="de.bwaldvogel" artifactId="mongo-java-server" version="1.44.0" baseVersion="1.44.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.bwaldvogel/mongo-java-server/1.44.0/b49836d704d32caa9f50ccfba7fbe69c63c2920b/mongo-java-server-1.44.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

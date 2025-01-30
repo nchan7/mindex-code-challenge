@@ -2,6 +2,10 @@ package com.mindex.challenge.data;
 
 import java.util.List;
 
+/**
+ * Employee model with the given attributes.
+ */
+
 public class Employee {
     private String employeeId;
     private String firstName;
@@ -9,9 +13,6 @@ public class Employee {
     private String position;
     private String department;
     private List<Employee> directReports;
-
-    public Employee() {
-    }
 
     public String getEmployeeId() {
         return employeeId;

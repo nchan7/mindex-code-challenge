@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * A Controller for Employee.
+ * Uses the EmployeeService to provide appropriate responses for the defined API endpoints.
+ */
+
 @RestController
 public class EmployeeController {
     private static final Logger LOG = LoggerFactory.getLogger(EmployeeController.class);
@@ -19,6 +24,12 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
+    /**
+     * Creates an employee given an employee payload.
+     *
+     * @param employee the employee payload from the request.
+     * @return The newly created employee.
+     */
     @PostMapping("/employee")
     public Employee create(@RequestBody Employee employee) {
         LOG.debug("Received employee create request for [{}]", employee);
@@ -26,16 +37,29 @@ public class EmployeeController {
         return employeeService.create(employee);
     }
 
+    /**
+     * Reads an employee given an employee id.
+     *
+     * @param id the employee id.
+     * @return The employee.
+     */
     @GetMapping("/employee/{id}")
     public Employee read(@PathVariable String id) {
-        LOG.debug("Received employee create request for id [{}]", id);
+        LOG.debug("Received employee read request for id [{}]", id);
 
         return employeeService.read(id);
     }
 
+    /**
+     * Updates an employee given an employee id.
+     *
+     * @param id the employee id.
+     * @param employee the employee to be updated.
+     * @return The updated employee.
+     */
     @PutMapping("/employee/{id}")
     public Employee update(@PathVariable String id, @RequestBody Employee employee) {
-        LOG.debug("Received employee create request for id [{}] and employee [{}]", id, employee);
+        LOG.debug("Received employee update request for id [{}] and employee [{}]", id, employee);
 
         employee.setEmployeeId(id);
         return employeeService.update(employee);

@@ -9,6 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.UUID;
 
+/**
+ * Service class of employee. Provides the business logic for the defined API's of employee.
+ */
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
@@ -29,7 +33,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee read(String id) {
-        LOG.debug("Creating employee with id [{}]", id);
+        LOG.debug("Reading employee with id [{}]", id);
 
         Employee employee = employeeRepository.findByEmployeeId(id);
 
