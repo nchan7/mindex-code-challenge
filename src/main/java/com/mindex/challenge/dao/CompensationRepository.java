@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * The Compensation Repository Interface.
+ * Created this repository to fetch compensation data for a specific employee using the persistence layer
  */
 @Repository
 public interface CompensationRepository extends MongoRepository<Compensation, String> {

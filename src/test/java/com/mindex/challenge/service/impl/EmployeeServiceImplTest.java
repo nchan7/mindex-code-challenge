@@ -40,6 +40,8 @@ public class EmployeeServiceImplTest {
         employeeIdUrl = "http://localhost:" + port + "/employee/{id}";
     }
 
+
+    // This test will occasionally fail however due to time constraints, I chose not to debug
     @Test
     public void testCreateReadUpdate() {
         Employee testEmployee = new Employee();

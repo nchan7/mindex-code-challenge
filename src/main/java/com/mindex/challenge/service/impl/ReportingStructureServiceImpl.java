@@ -42,6 +42,12 @@ public class ReportingStructureServiceImpl implements ReportingStructureService 
         return reportingStructure;
     }
 
+    /**
+    * Given a tree reporting structure, decided to use a recursive function for fetching the direct reports in the tree hierarchy,
+    * This recursive function only accounts for tree reporting structures
+    * In the case that an employee reports to more than one employee, this function would not account for that
+     */
+
     private int getNumberOfReportsByEmployee(List<Employee> employees, int numberOfReports) {
         // null check
         if (employees != null) {

@@ -37,6 +37,8 @@ public class CompensationServiceImpl implements CompensationService {
     public Compensation getCompensationByEmployeeId(String id) {
         LOG.debug("Reading compensation with employee id [{}]", id);
 
+        // Although finding the employee is not entirely necessary,
+        // I wanted to ensure that the compensation variable uses the same employee and employee.id
         Employee employee = employeeRepository.findByEmployeeId(id);
 
         if (employee == null) {

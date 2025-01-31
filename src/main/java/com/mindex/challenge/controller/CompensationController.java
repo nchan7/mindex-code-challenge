@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
  * Uses the CompensationService to provide appropriate responses for the defined API endpoints.
  */
 
+// Considered creating these endpoints within the EmployeeController (i.e. employee/compensation/{id})
+// For the sake of this exercise chose to create a separate CompensationController for readability and clarity
+
 @RestController
 public class CompensationController {
     private static final Logger LOG = LoggerFactory.getLogger(CompensationController.class);

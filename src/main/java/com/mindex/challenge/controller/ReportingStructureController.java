@@ -28,6 +28,8 @@ public class ReportingStructureController {
      * @return The number of reports (direct and indirect) for an employee.
      */
 
+    // Considered creating this endpoint within employee (i.e. employee/reportingStructure/{id})
+    // For the sake of this exercise chose to create a separate ReportingStructureController for readability and clarity
     @GetMapping("/reportingStructure/{id}")
     public ReportingStructure getReportsByEmployee(@PathVariable String id) {
         LOG.debug("Received reporting structure create request for employee id [{}]", id);
