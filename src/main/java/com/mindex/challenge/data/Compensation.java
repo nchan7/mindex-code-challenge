@@ -8,16 +8,16 @@ import java.util.Date;
 
 public class Compensation {
     private String employeeId;
-    private Float salary;
+    private Double salary;
     private Date effectiveDate;
 
     public String getEmployeeId() { return employeeId; }
 
     public void setEmployeeId(String employeeId) { this.employeeId = employeeId; }
 
-    public Float getSalary() { return salary; }
+    public Double getSalary() { return salary; }
 
-    public void setSalary(Float salary) { this.salary = salary; }
+    public void setSalary(Double salary) { this.salary = salary; }
 
     public Date getEffectiveDate() { return effectiveDate; }
 
